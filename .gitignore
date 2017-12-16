@@ -9,3 +9,5 @@
 *.texi
 *.eps
 lilypond/**/render/*.tex
+!lilypond/**/render/*.pdf
+lilypond/**/render/*-[0-9].pdf
