@@ -5,3 +5,7 @@
 *.pdf
 *.gz
 *.toc
+*.count
+*.texi
+*.eps
+lilypond/**/render/*.tex
