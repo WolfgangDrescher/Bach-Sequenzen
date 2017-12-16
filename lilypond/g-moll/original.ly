@@ -26,7 +26,7 @@ rightHandMusic = \relative c'' {
 
 leftHandMusic = \relative c {
 	\set Score.barNumberVisibility = #all-bar-numbers-visible
-	\set Score.currentBarNumber = #24
+	\set Score.currentBarNumber = #25
 	%{r2%}
 	\partial 2
 	g8 g'16 a b8 a16 g
