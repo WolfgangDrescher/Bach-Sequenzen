@@ -8,7 +8,7 @@
 
 \paper{
 	indent = 0\cm
-	line-width = 14.69785\cm
+	line-width = 15.59778\cm
 	top-margin = 2.5\cm
 	bottom-margin = 2.5\cm
 	ragged-bottom = ##t
