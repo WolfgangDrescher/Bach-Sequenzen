@@ -10,6 +10,7 @@
 \usepackage[style=verbose-ibid]{biblatex} % -ibid
 \usepackage[bottom,norule,hang,perpage]{footmisc}
 \usepackage{geometry}
+\usepackage{chngcntr}
 
 \geometry{a4paper,top=30mm,right=27mm,bottom=30mm,left=27mm}
 \setcounter{secnumdepth}{3}
@@ -20,6 +21,7 @@
 \renewcommand{\newunitpunct}{\addcomma\addspace} % Zitatelemente mit einem Komma trennen (nicht der standardmässig Punkt)
 \renewcommand{\subtitlepunct}{\addperiod\addspace}
 % \renewcommand{\footnoterule}{\rule{45mm}{0.1mm}{\vspace*{5mm}}} % Trennlinie über Footer
+\counterwithin{figure}{section}
 
 \title{Sequenzen in \emph{Das Wohltemperierte Clavier, 1.~Band} von J. S. Bach}
 \subtitle{Kontrapunktische Analysen von Modellen, Synkopendissonanzen und deren Verzierungen in ausgewählten Sequenzen aus den Fugen}
