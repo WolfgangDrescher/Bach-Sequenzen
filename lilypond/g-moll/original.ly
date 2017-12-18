@@ -17,7 +17,7 @@ rightHandMusic = \relative c'' {
 			\voiceTwo
 			b16 d, e fis g4~
 			g16 g f! es! d4~ d16 b c d es4~
-			es16 es d c b4~ b16 g a! b c4~
+			es16 es d c b4~ b16 g a! h c4~
 			c16 c b! a g4~ g16 g a b c8 cis
 			d4
 		}
