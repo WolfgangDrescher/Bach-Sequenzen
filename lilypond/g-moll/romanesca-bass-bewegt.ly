@@ -2,7 +2,6 @@
 \include "../template-inline.ly"
 
 rightHandMusic = \relative c'' {
-	%{r2%}
 	\partial 2
 	<<
 		\new Voice {
@@ -29,7 +28,6 @@ leftHandMusic = <<
 		\relative c' {
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\set Score.currentBarNumber = #25
-			%{r2%}
 			\partial 2
 			r8 g b g
 			r d f d r es g es
@@ -45,7 +43,7 @@ basseFondamentale = <<
 		\relative c' {
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\set Score.currentBarNumber = #25
-			\override NoteHead.style = #'harmonic
+			%{ \override NoteHead.style = #'harmonic %}
 			%{r2%}
 			\partial 2
 			g2
@@ -67,17 +65,28 @@ basseFondamentale = <<
 >>
 
 \score {
-	\new PianoStaff <<
-		\new Staff = "Rechte Hand"  <<
-			\key g \minor
-			\rightHandMusic
+	%{ \new StaffGroup << %}
+	<<
+		\new PianoStaff \with {
+			%{ instrumentName = #"Clavier" %}
+			%{ shortInstrumentName = #"Cl." %}
+		}
+		<<
+			\new Staff <<
+				\key g \minor
+				\rightHandMusic
+			>>
+			\new Staff <<
+				\key g \minor
+				\clef "bass"
+				\leftHandMusic
+			>>
 		>>
-		\new Staff = "Linke Hand" <<
-			\key g \minor
-			\clef "bass"
-			\leftHandMusic
-		>>
-		\new Staff = "Basse Fondamentale" <<
+		\new Staff \with {
+			%{ instrumentName = "Basse Fondamentale" %}
+			%{ shortInstrumentName = #"B. F." %}
+		}
+		<<
 			\key g \minor
 			\clef "bass"
 			\basseFondamentale
