@@ -1,6 +1,13 @@
 \version "2.18.2"
 \include "../template-inline.ly"
 
+\layout {
+	\context {
+		\Voice
+		\consists "Horizontal_bracket_engraver"
+	}
+}
+
 rightHandMusic = \relative c'' {
 	\partial 2
 	<<
@@ -44,12 +51,13 @@ basseFondamentale = <<
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\set Score.currentBarNumber = #25
 			%{ \override NoteHead.style = #'harmonic %}
+			\once \override HorizontalBracket.direction = #DOWN
 			%{r2%}
 			\partial 2
-			g2
-			d es
-			b c
-			g es'2
+			g2\startGroup
+			d\stopGroup es\startGroup
+			b\stopGroup c\startGroup
+			g\stopGroup es'2
 			d4
 		}
 	}
